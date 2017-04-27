@@ -23,7 +23,12 @@ app.use(express.static("./public"));
 // -------------------------------------------------
 
 // MongoDB Configuration configuration
-mongoose.connect("mongodb://admin:reactrocks@ds023593.mlab.com:23593/heroku_pg676kmk");
+var databaseUri = 'mogodb://localhost/Dropbox/bootcamphw/nytreact';
+if (process.env.MONGODB_URI) {
+  // This will execute when using heroku app
+  mongoose.connect(process.env.MONGODB_URI);
+} 
+
 var db = mongoose.connection;
 
 db.on("error", function(err) {

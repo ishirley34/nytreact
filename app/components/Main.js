@@ -43,7 +43,7 @@ var Main = React.createClass({
 
           {/* Jumbotron */}
           <div className="jumbotron">
-            <h2 className="text-center"><strong>(ReactJS) New York Times Article Scrubber</strong></h2>
+            <h2 className="text-center"><strong>New York Times Article Scrubber</strong></h2>
             <h3 className="text-center">Search for and save articles of interest.</h3>
           </div>
 
